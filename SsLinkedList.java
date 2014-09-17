@@ -36,46 +36,45 @@ public class SsLinkedList
 		 
 class LinkedList2 
 {
-		    
+		    // reference to the head node.
 		    private Node head;
 		    private int listCount;
 		 
-		    
+		    // LinkedList constructor
 		    public LinkedList2() {
-		    
+		        // this is an empty list, so the reference to the head node is set to a new node with no data
 		        head = new Node(null);
 		        listCount = 0;
 		    }
 		 
 		    public void add(Object data)
-		    
+		    // appends the specified element to the end of this list.
 		    {
 		        Node Temp = new Node(data);
 		        Node Current = head;
-		        
+		        // starting at the head node, crawl to the end of the list
 		        while (Current.getNext() != null) {
 		            Current = Current.getNext();
 		        }
-		        
+		        // the last node's "next" reference set to our new node
 		        Current.setNext(Temp);
-		        listCount++;
+		        listCount++;// increment the number of elements variable
 		    }
 		 
 		    public void add(Object data, int index)
-		    
+		    // inserts the specified element at the specified position in this list
 		    {
 		        Node Temp = new Node(data);
 		        Node Current = head;
-		      
+		        // crawl to the requested index or the last element in the list,whichever comes first
 		        for (int i = 1; i < index && Current.getNext() != null; i++) {
 		            Current = Current.getNext();
 		        }
-		        
-		        
+		        // set the new node's next-node reference to this node's next-node reference
 		 	Temp.setNext(Current.getNext());
-		        
+		        // now set this node's next-node reference to the new node
 		        Current.setNext(Temp);
-		        listCount++;
+		        listCount++;// increment the number of elements variable
 		    }
 		 
 		 
@@ -91,9 +90,12 @@ class LinkedList2
 		 
 		    private class Node 
 		    {
+		        // reference to the next node in the chain, or null if there isn't one.
 		        Node next;
+		        // data carried by this node.could be of any type you need.
 		        Object data;
-	
+		 
+		        // Node constructor
 		        public Node(Object dataValue) 
 		        {
 		            next = null;
