@@ -27,7 +27,7 @@ public class SsLinkedList
 			        break;
 		        	case 2:
 
-		//		        System.out.println("linkedlist: " + lList);
+				        System.out.println("linkedlist: " + lList);
 				        break;
 		        	}
 		        }while(choice!=3);
