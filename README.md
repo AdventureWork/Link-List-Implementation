@@ -1,6 +1,6 @@
 Link-List-Implementation
 =====================================
-Linked listImplementation from scrap
+Linked list Implementation from scrap
 ======================================
 Version 1.2
 ======================================
